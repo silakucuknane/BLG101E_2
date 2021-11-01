@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Izmir Ataturk High School</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	
+		<body>
+			<div class="header">
+				<div class="logo">
+					<img id="iallogo" src="iallogo.png" alt="official logo" width="90" height="140">
+					<img id="mylogo" src="logo.svg" alt="my logo" width="210" height="200">
+				</div>
+				<h1>Izmir Ataturk High School</h1>
+				<p><em>Warning: This is a fictional website prepared as a demonstration of a homework.</em></p>
+			</div>
+			
+			<div class="navbar">
+				<a class="active" href="index.html">Home</a>
+				<a href="index.html#history">History</a>
+				<a href="index.html#alumni">Alumni</a>
+				<a href="index.html#list">List Teachers and Sports Teams</a>
+				<a style="float:right;" href="index.html#about">About</a>
+			</div>
+			
+			
+			<div class="row" id="home">
+		
+				<div class="leftcolumn">
+					
+					<div class="card" id="history">
+						<h2>History</h2>
+						<hr>
+						<p style="font-size: 20px;">Izmir Ataturk High School is an esteemed high school with respectable history.<br>The school was founded in 1888.<br>
+						Even though the education had to be paused for a while due to Izmir's invasion by the Greek forces, Izmir Ataturk High School continued as a <i>Mekteb-i Sultani</i> until the foundation of the Republic.<br>
+						After the foundation of the Turkish Republic, the school continued education under the name of "Izmir Erkek Lisesi" until 1942 where the name "Izmir Ataturk High School" was given to the school.<br>
+						One of the famous pictures of Ataturk was taken when he visited the school in 1932.<br>
+						</p>
+						<img class="center" src="ataturk.jpg" alt="Ataturk visiting Izmir Erkek Lisesi" width="500" height="345">
+						<p style="margin-bottom:3px;"><a style="font-size: 10px;" href="http://izmirataturklisesi.meb.k12.tr/meb_iys_dosyalar/35/01/454761/fotograf_galerisi_2817081.html?CHK=4db5cf2f6ee097a977601abe8ebf0165" target="_blank">Picture Source</a></p>
+					</div>
+					
+					<div class="card" id="alumni">
+						<h2>Alumni</h2>
+						<hr>
+						<p>Izmir Ataturk High School has many valued alumni in various areas such as politics,art and medicine.<br>
+						Here is some of our famous alumni:</p>
+						<ul>
+							<li>Ahmet Adnan Saygun</li>
+							<li>Yakup Kadri Karaosmanoğlu</li>
+							<li>Halit Ziya Uşaklıgil</li>
+							<li>Necati Cumalı</li>
+							<li>Ahmet Haşim</li>
+							<li>Atilla İlhan</li>
+							<li>Salah Birsel</li>
+							<li>Mehmet Şükrü Saraçoğlu</li>
+							<li>Prof.Dr. Siyami Ersek</li>
+							<li>Dr.Behçet Uz</li>
+							<li>Yılmaz Özdil</li>
+							<li>Fatih Portakal</li>
+						</ul>
+					</div>
+					
+					<div class="card" id="ball">
+						<h2>Republic Ball</h2>
+						<hr>
+						<p style="font-size: 20px;">Izmir Ataturk High School has an ongoing tradition of organizing a ball every year on Republic Day.<br> 
+						Senior students put on a waltz show and male students perform a traditional dance called <em>Zeybek</em>.
+						<br>Many people around Izmir come to attend this event every year.
+						<br>Here is a picture of one of our previous Republic Ball: </p>
+						<img style="margin-bottom: 10px;" class="center" src="balo.jpg" alt="republicball" width="300" height="350">	
+					</div>
+					
+					<div class="card" id="lgs">
+						<h2>LGS Statistics</h2>
+						<hr>
+						<br>
+						<table>
+							<tr>
+								<th colspan="3">Last 5 Years' Base Scores and Percentiles</th>
+							</tr>
+							<tr>
+								<th>Year</th>
+								<th>Base Score</th>
+								<th>Percentile</th>
+							</tr>
+							<tr>
+								<td>2020</td>
+								<td>460.3406</td>
+								<td>1.07</td>
+							</tr>
+							<tr>
+								<td>2019</td>
+								<td>476.8871</td>
+								<td>1.33</td>
+							</tr>
+							<tr>
+								<td>2018</td>
+								<td>414.6920</td>
+								<td>1.48</td>
+							</tr>
+							<tr>
+								<td>2017</td>
+								<td>490.7868</td>
+								<td>1.80</td>
+							</tr>
+							<tr>
+								<td>2016</td>
+								<td>485.2911</td>
+								<td>1.48</td>
+							</tr>	
+					</table>
+					</div>
+					
+					<div class="card" id="list">
+						<h2>List Teachers and Sports Teams</h2>
+						<hr>
+						<h3 style="color: #FFE633;">Teachers:</h3>
+						<table id="teacherstable">
+							<tr>
+								<th>Teacher Name</th>
+								<th>Subject</th>
+								<th>Cluster</th>
+							</tr>
+						</table>
+						<br>
+						<h3 style="color: #FFE633;">Sports Teams:</h3>
+						<table id="teamtable">
+							<tr>
+								<th>Sports Type</th>
+								<th>Team Name</th>
+							</tr>
+						</table>
+						<br>
+						<br>
+						<button onclick="addteacher()">Add Teacher</button>
+						<button onclick="addteam()">Add Team</button>
+						
+						<div id="teacherform" style="display: none;">
+							<form id="form1" onsubmit="return false">
+								<br>
+								<label for="subject" style="color: #FFE633;">Subject:</label>
+								<input id="subject" name="subject" type="text"/>
+								
+								<label for="name" style="color: #FFE633;">Teacher Name:</label>
+								<input id="name" name="name" type="text" />
+								
+								<label for="cluster" style="color: #FFE633;">Cluster:</label>
+								<select id="cluster" name="cluster">
+									<option value="SAY">SAY</option>
+									<option value="SÖZ">SÖZ</option>
+									<option value="EA">EA</option>
+									<option value="DIL">DIL</option>
+								</select>
+								<br>
+								<br>
+								<input type="submit" value="Add" onclick="addtoteacher()" />
+							</form>
+						</div>
+						
+						<div id="teamform" style="display: none;">
+							<form id="form2" onsubmit="return false">
+								<br>
+								<label for="sportstype" style="color: #FFE633;">Sports Type:</label>
+								<select id="sportstype" name="sportstype">
+									<option value="Football">Football</option>
+									<option value="Basketball">Basketball</option>
+									<option value="Volleyball">Volleyball</option>
+									<option value="Handball">Handball</option>
+								</select>
+								
+								<label for="team" style="color: #FFE633;">Team Name:</label>
+								<input id="team" name="team" type="text" />		
+								<br>
+								<br>
+								<input type="submit" onclick="addtoteam()" value="Add" />
+							</form>
+						</div>
+						
+						<script>
+							function addteacher(){
+								var x = document.getElementById("teacherform");
+								if(x.style.display === "none"){
+									x.style.display = "block";
+								}else{
+									x.style.display = "none";
+								}
+								if(document.getElementById("teamform").style.display === "block" && document.getElementById("teacherform").style.display === "block"){
+								addteam();
+								}
+							}
+						</script>
+						
+						<script>
+							function addteam(){
+								var x = document.getElementById("teamform");
+								if(x.style.display === "none"){
+									x.style.display = "block";
+								}else{
+									x.style.display = "none";
+								}
+								if(document.getElementById("teamform").style.display === "block" && document.getElementById("teacherform").style.display === "block"){
+								addteacher();
+								}
+							}
+						</script>
+						
+						<script>
+							function addtoteacher(){
+								var table = document.getElementById("teacherstable");
+								var row = table.insertRow(-1);
+								var name = row.insertCell(0);
+								var subject = row.insertCell(1);
+								var cluster = row.insertCell(2);
+								name.innerHTML = document.getElementById("name").value;
+								subject.innerHTML = document.getElementById("subject").value;
+								cluster.innerHTML = document.getElementById("cluster").value;
+								document.getElementById("form1").reset();
+							}
+						</script>
+						
+						<script>
+							function addtoteam(){
+								var table = document.getElementById("teamtable");
+								var row = table.insertRow(-1);
+								var sportstype = row.insertCell(0);
+								var team = row.insertCell(1);
+								sportstype.innerHTML = document.getElementById("sportstype").value;
+								team.innerHTML = document.getElementById("team").value;
+								document.getElementById("form2").reset();
+								
+							}
+						</script>
+					</div>
+					
+					<div class="card" id="about">
+						<h2>About Me</h2>
+						<hr>
+						<img style="display: block; margin-left: auto; margin-right: auto;" id="lilo" src="lilo.png" alt="lilo" width="200" height="200">
+						<p>
+							Hello and welcome to my website!<br>
+							My name is Sıla Küçüknane.<br>
+							I graduated from Izmir Ataturk High School in 2019.<br>
+							I am currently a computer engineering student in Istanbul Technical University.
+						</p>		
+					</div>
+					
+				</div>
+				
+				<div class="rightcolumn">
+					<div class="card" id="march">
+						<h2>School March</h2>
+						<hr>
+						<p>Bizim kalbimiz ilim ateşiyle doludur</p>
+						<p>Biz bağlıyız gönülden sevgili lisemize</p>
+						<p>Bugün tuttuğumuz yol inkîlabın yoludur</p>
+						<p>Yarının ümitleri genç nesil derler bize</p>
+						<p>Bize iman veriyor hür vatanın hür sesi</p>
+						<p>Ebediyen varolsun <strong>İzmir Atatürk Lisesi</strong></p>
+						<br>
+						<p>Nurlu mefkûremize lise hayat veriyor</p>
+						<p>İlim bizim aşkımız Türklük bizim şanımız</p>
+						<p>Gideceğimiz yolu gazimiz gösteriyor</p>
+						<p>Yaşasın Türk milleti yaşasın vatanımız</p>
+						<p>Bize iman veriyor hür vatanın hür sesi</p>
+						<p>Ebediyen varolsun <strong>İzmir Atatürk Lisesi</strong></p>
+						<br>
+						<p><small>Composition : Ahmet Adnan Saygun</small></p>
+					</div>
+					
+					<div class="card">
+						<h2>Historical Building</h2>
+						<hr>
+						<img style="width: 95%; margin-left: auto; margin-right: auto; display: block;" src="bina.jpg" alt="ialbuilding" width="300" height="250">
+						<p><a style="font-size: 10px;" href="https://www.izmirdergisi.com/tr/mimari/1821-antik-ege-nin-izleri-izmir-ataturk-lisesi-nde" target="_blank">Picture Source</a></p>
+					</div>
+					
+					<div class="card">
+						<h2>Official Websites</h2>
+						<hr>
+						<a href="http://www.izalev.com/" target="_blank">Izmir Ataturk High School Education Foundation</a>
+						<hr>
+						<a href="https://www.ialmezun.org.tr/" target="_blank">Izmir Ataturk High School Alumni Association</a>
+						<hr>
+						<a href="http://izmirataturklisesi.meb.k12.tr/" target="_blank">Official Website of Izmir Ataturk High School</a>
+						<hr>
+					</div>
+					
+					<div class="card">
+						<h2>Numbers</h2>
+						<hr>
+						<br>
+						<table>
+							<tr>
+								<td style="background-color: #380038; color: #FFE633;">Class</td>
+								<td>52</td>
+							</tr>
+							<tr>
+								<td style="background-color: #380038; color: #FFE633;">Teacher</td>
+								<td>110</td>
+							</tr>
+							<tr>
+								<td style="background-color: #380038; color: #FFE633;">Student</td>
+								<td>1489</td>
+							</tr>					
+						</table>
+					</div>
+					
+					<div class="card">
+						<h2>Contact</h2>
+						<hr>
+						<p>Phone : (232) 464 80 61</p>
+						<p>Fax : (232) 464 80 11</p>
+						<p>Address : Kultur St. Lozan Square 35220 Alsancak Konak/IZMIR</p>
+					</div>
+					
+				</div>	
+			</div>
+			
+			<div class="footer"><h2>© Sıla Küçüknane 2020</h2></div>
+				
+		</body>
+</html>
